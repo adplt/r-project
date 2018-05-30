@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 temp = data$height\
+data$height = data$weight\
+data$weight = temp\
+\
+\'97\'97> untuk menukar nilai height same weight.\
+\
+data$weight[which(is.na(data$weight) == TRUE)] = 0 \'97\'97\'97> untuk ganti nilai yg NA jadi 0.\
+\
+data$sex[which(data$sex == 'male')] = 'Male' \'97\'97\'97\'97\'97\'97> untuk ganti nilai yg male jadi Male.\
+\
+data$sex[which(data$sex == 'female')] = 'Female'  \'97\'97\'97\'97> untuk ganti nilai yg female jadi Female.\
+\
+sum(data$weight, data$weight != 0, 1) \'97\'97\'97\'97\'97\'97\'97\'97\'97> untuk menjumlahkan nilai kolom weight.\
+\
+mean(data$weight) \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97> untuk mencari nilai rata2 kolom weight.\
+\
+data$weight[which(data$weight == 0)] = mean(data$weight) \'97\'97\'97> untuk mengganti nilai weight yg 0 jadi nilai rata2 weight yg ada disana.\
+\
+data$weight = as.integer(data$weight) \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97> untuk mengubah nilai decimal menjadi integer.\
+\
+data$sex[which(data$sex == 'M')] = 'Male' \'97\'97\'97\'97\'97\'97> untuk ganti nilai yg M jadi Male.\
+\
+data$sex[which(data$sex == \'91F\'92)] = \'91F\'92 \'97\'97\'97\'97\'97\'97> untuk ganti nilai yg F jadi Female.\
+\
+data$sex[which(is.na(data$sex) == TRUE)] = if(data$weight[which(is.na(data$sex) == TRUE)] < 70) 'Female' else 'Male'  \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97> untuk validasi kalau berat\'92a dibawah 70 berarti nilai sex yg N/A menjadi Female.}
